@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Divya - Homeopathic Doctor | Natural Healing & Wellness</title>
+    <meta name="description" content="Experience holistic homeopathic treatment with Dr. Divya at Bhardwaj Homoeopathy Clinic. Over 8 years of expertise in natural healing addressing root causes, not just symptoms.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                            950: '#0a302e',
+                        },
+                        accent: {
+                            gold: '#d4a574',
+                            cream: '#f7fafa',
+                        }
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            overflow-x: hidden;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0a302e 0%, #134e4a 25%, #0f766e 50%, #134e4a 75%, #115e59 100%);
+        }
+        
+        .hero-left-bg {
+            background: linear-gradient(135deg, #0f766e 0%, #134e4a 40%, #115e59 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .leaf-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2314b8a6' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(15, 118, 110, 0.15);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #14b8a6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Swiper Custom Styles */
+        .hero-swiper .swiper-pagination {
+            bottom: 30px !important;
+        }
+        
+        .hero-swiper .swiper-pagination-bullet {
+            background: rgba(255, 255, 255, 0.4);
+            width: 10px;
+            height: 10px;
+            opacity: 1;
+            margin: 0 5px !important;
+        }
+        
+        .hero-swiper .swiper-pagination-bullet-active {
+            background: #ffffff;
+            width: 28px;
+            border-radius: 5px;
+        }
+        
+        .image-overlay {
+            background: linear-gradient(45deg, rgba(15, 118, 110, 0.2) 0%, rgba(20, 184, 166, 0.1) 100%);
+        }
+        
+        /* Hide scrollbar for carousel */
+        .hero-swiper {
+            overflow: hidden;
+        }
+        
+        .hero-swiper .swiper-wrapper {
+            overflow: hidden;
+        }
+        
+        /* Hide hero background image on mobile */
+        @media (max-width: 768px) {
+            .hero-bg-carousel {
+                display: none !important;
+            }
+            
+            .hero-mobile-bg {
+                background: linear-gradient(135deg, #0f766e 0%, #134e4a 50%, #115e59 100%);
+            }
+        }
+        
+        /* Services Swiper Styles */
+        .services-swiper {
+            padding-bottom: 50px;
+            overflow: hidden;
+        }
+        
+        .services-swiper .swiper-wrapper {
+            align-items: stretch;
+            transition-timing-function: ease-out;
+        }
+        
+        .services-swiper .swiper-slide {
+            height: auto;
+        }
+        
+        .services-swiper .swiper-pagination {
+            position: relative;
+            bottom: 0;
+            margin-top: 20px;
+        }
+        
+        .services-swiper .swiper-pagination-bullet {
+            background: #0f766e;
+            opacity: 0.3;
+            width: 10px;
+            height: 10px;
+            cursor: pointer;
+        }
+        
+        .services-swiper .swiper-pagination-bullet-active {
+            opacity: 1;
+        }
+        
+        /* Testimonials Swiper Styles */
+        .testimonials-swiper {
+            padding-bottom: 50px;
+            overflow: hidden;
+        }
+        
+        .testimonials-swiper .swiper-wrapper {
+            align-items: stretch;
+            transition-timing-function: ease-out;
+        }
+        
+        .testimonials-swiper .swiper-slide {
+            height: auto;
+        }
+        
+        .testimonials-swiper .swiper-pagination {
+            position: relative;
+            bottom: 0;
+            margin-top: 20px;
+        }
+        
+        .testimonials-swiper .swiper-pagination-bullet {
+            background: #0f766e;
+            opacity: 0.3;
+            width: 10px;
+            height: 10px;
+            cursor: pointer;
+        }
+        
+        .testimonials-swiper .swiper-pagination-bullet-active {
+            opacity: 1;
+        }
+        
+        .testimonials-swiper .swiper-button-next,
+        .testimonials-swiper .swiper-button-prev {
+            color: #0f766e;
+            background: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .testimonials-swiper .swiper-button-next:after,
+        .testimonials-swiper .swiper-button-prev:after {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .testimonials-swiper .swiper-button-next,
+            .testimonials-swiper .swiper-button-prev {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="w-full px-6 sm:px-10 md:px-16 lg:px-20">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="#home" class="flex items-start space-x-2 flex-shrink min-w-0">
+                    <div class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 flex-shrink-0 mt-0.5">
+                        <i data-lucide="leaf" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <div class="flex flex-col items-start min-w-0">
+                        <p class="text-[10px] sm:text-xs text-white/80 font-medium tracking-widest uppercase leading-tight mb-0.5 whitespace-nowrap overflow-hidden text-ellipsis">
+                            Classical Homeopathy • Natural Remedies
+                        </p>
+                        <span class="text-lg sm:text-xl font-serif font-semibold text-white leading-tight whitespace-nowrap">Dr. Divya Bhardwaj</span>
+                    </div>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-4 xl:space-x-6 text-sm xl:text-base">
+                    <a href="#home" class="nav-link text-white/90 hover:text-white transition-colors whitespace-nowrap">Home</a>
+                    <a href="#about" class="nav-link text-white/90 hover:text-white transition-colors whitespace-nowrap">About</a>
+                    <a href="#services" class="nav-link text-white/90 hover:text-white transition-colors whitespace-nowrap">Services</a>
+                    <a href="#why-homeopathy" class="nav-link text-white/90 hover:text-white transition-colors whitespace-nowrap hidden xl:inline-block">Why Homeopathy</a>
+                    <a href="#testimonials" class="nav-link text-white/90 hover:text-white transition-colors whitespace-nowrap">Testimonials</a>
+                    <a href="#contact" class="bg-white text-primary-800 px-4 xl:px-6 py-2 xl:py-2.5 rounded-full font-medium hover:bg-primary-100 transition-all hover:shadow-lg whitespace-nowrap ml-2 text-sm xl:text-base">
+                        Book Appointment
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-white p-2 flex-shrink-0" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-primary-900/95 backdrop-blur-lg w-full" id="mobile-menu">
+            <div class="px-6 sm:px-10 py-6 space-y-4">
+                <a href="#home" class="block text-white/90 hover:text-white py-2">Home</a>
+                <a href="#about" class="block text-white/90 hover:text-white py-2">About</a>
+                <a href="#services" class="block text-white/90 hover:text-white py-2">Services</a>
+                <a href="#why-homeopathy" class="block text-white/90 hover:text-white py-2">Why Homeopathy</a>
+                <a href="#testimonials" class="block text-white/90 hover:text-white py-2">Testimonials</a>
+                <a href="#contact" class="block bg-white text-primary-800 px-6 py-3 rounded-full font-medium text-center mt-4">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Merged Layout -->
+    <section id="home" class="min-h-screen relative overflow-hidden hero-mobile-bg">
+        <!-- Full-width background image carousel (hidden on mobile) -->
+        <div class="absolute inset-0 hero-bg-carousel">
+            <div class="swiper hero-swiper h-full w-full">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://drnidhibhatt.in/assets/img/gallery/gallery-1.jpg" 
+                             alt="Bhardwaj Homoeopathy Clinic" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://drnidhibhatt.in/assets/img/gallery/gallery-2.jpg" 
+                             alt="Homeopathic Consultation" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://drnidhibhatt.in/assets/img/gallery/gallery-3.jpg" 
+                             alt="Natural Healing Treatment" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://drnidhibhatt.in/assets/img/gallery/gallery-4.jpg" 
+                             alt="Homeopathic Medicine Care" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="swiper-pagination !bottom-8 !z-30"></div>
+            </div>
+        </div>
+        
+        <!-- Smooth gradient overlay - merges teal into image -->
+        <div class="absolute inset-0 z-10" style="background: linear-gradient(to right, 
+            rgba(15,118,110,1) 0%, 
+            rgba(15,118,110,1) 30%, 
+            rgba(15,118,110,0.85) 45%, 
+            rgba(15,118,110,0.6) 55%, 
+            rgba(15,118,110,0.3) 65%, 
+            rgba(15,118,110,0.1) 75%,
+            transparent 90%);"></div>
+        
+        <!-- Content overlay -->
+        <div class="relative z-20 min-h-screen flex items-center">
+            <div class="px-6 sm:px-10 md:px-16 lg:px-20 py-24 lg:py-0 w-full lg:w-[60%]">
+                <div class="text-white max-w-xl" data-aos="fade-right">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold leading-[1.1] mb-6">
+                        Heal Naturally,<br>
+                        <span class="text-primary-300 italic">Live Vibrantly</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-white/80 mb-10 leading-relaxed">
+                        Discover the transformative power of homeopathy—where microscopic doses create miraculous changes. Dr. Divya specializes in treating chronic conditions, immunity disorders, and lifestyle ailments through personalized constitutional remedies that work with your body's innate healing wisdom.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mb-14">
+                        <a href="#contact" class="group bg-white/10 backdrop-blur-sm border border-white/30 text-white px-7 py-3.5 rounded-full font-medium hover:bg-white hover:text-primary-800 transition-all duration-300 flex items-center space-x-2">
+                            <span>Schedule Consultation</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#about" class="bg-white text-primary-800 px-7 py-3.5 rounded-full font-medium hover:bg-primary-100 transition-all shadow-lg hover:shadow-xl">
+                            Learn More
+                        </a>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="flex flex-wrap gap-8 sm:gap-12">
+                        <div class="text-center">
+                            <p class="text-4xl sm:text-5xl font-serif font-bold text-white italic">8<span class="text-primary-300">+</span></p>
+                            <p class="text-sm text-white/60 mt-1">Years Experience</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-4xl sm:text-5xl font-serif font-bold text-white italic">1K<span class="text-primary-300">+</span></p>
+                            <p class="text-sm text-white/60 mt-1">Happy Patients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white/50 animate-bounce z-20">
+            <i data-lucide="chevron-down" class="w-7 h-7"></i>
+        </div>
+    </section>
+
+    <!-- Mobile Gallery Carousel - Only visible on mobile -->
+    <section class="lg:hidden bg-white py-8">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="swiper mobile-gallery-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://drnidhibhatt.in/assets/img/gallery/gallery-1.jpg" 
+                             alt="Bhardwaj Homoeopathy Clinic" 
+                             class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://drnidhibhatt.in/assets/img/gallery/gallery-2.jpg" 
+                             alt="Homeopathic Consultation" 
+                             class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://drnidhibhatt.in/assets/img/gallery/gallery-3.jpg" 
+                             alt="Natural Healing Treatment" 
+                             class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://drnidhibhatt.in/assets/img/gallery/gallery-4.jpg" 
+                             alt="Homeopathic Medicine Care" 
+                             class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                    </div>
+                </div>
+                <div class="swiper-pagination !relative !mt-4"></div>
+            </div>
+        </div>
+    </section>
+    <!-- End Mobile Gallery Carousel -->
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-accent-cream relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-primary-100 rounded-full -translate-y-1/2 translate-x-1/2 opacity-50"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Image Side -->
+                <div class="relative" data-aos="fade-right">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=700&fit=crop" 
+                             alt="Dr. Divya - Homeopathic Doctor" 
+                             class="rounded-3xl shadow-2xl w-full max-w-md mx-auto">
+                        
+                        <!-- Experience Badge -->
+                        <div class="absolute -bottom-6 -right-6 bg-primary-700 text-white p-6 rounded-2xl shadow-xl">
+                            <p class="text-4xl font-bold">8+</p>
+                            <p class="text-sm text-primary-200">Years of<br>Excellence</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content Side -->
+                <div data-aos="fade-left">
+                    <p class="text-primary-600 font-medium tracking-wider uppercase mb-4">About Dr. Divya</p>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-6">
+                        Dedicated to Your <span class="text-primary-600">Natural Wellness</span>
+                    </h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Dr. Divya is a distinguished homeopathic physician at Bhardwaj Homoeopathy Clinic with over 8 years of experience in treating chronic and acute conditions through the gentle art of homeopathy. Her approach combines classical homeopathic principles with modern diagnostic understanding.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        She has dedicated her practice to understanding each patient's unique constitution and providing personalized treatment plans that address the root cause of ailments. With over 1000 successfully treated patients, she continues to help people achieve lasting wellness through natural healing.
+                    </p>
+                    
+                    <!-- Qualifications -->
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="graduation-cap" class="w-5 h-5 text-primary-600"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium">BHMS, MD (Hom)</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="badge-check" class="w-5 h-5 text-primary-600"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium">Registered Practitioner</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="users" class="w-5 h-5 text-primary-600"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium">10,000+ Patients</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                                <i data-lucide="heart-pulse" class="w-5 h-5 text-primary-600"></i>
+                            </div>
+                            <span class="text-gray-700 font-medium">Holistic Approach</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-flex items-center space-x-2 bg-primary-700 text-white px-8 py-4 rounded-full font-medium hover:bg-primary-800 transition-all shadow-lg hover:shadow-xl">
+                        <span>Book a Consultation</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-primary-600 font-medium tracking-wider uppercase mb-4">Our Services</p>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-4">
+                    Comprehensive Homeopathic <span class="text-primary-600">Care</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    We offer personalized treatment for a wide range of conditions, focusing on long-term healing rather than temporary relief.
+                </p>
+            </div>
+            
+            <!-- Services Swiper - Carousel on mobile, Grid on desktop -->
+            <div class="swiper services-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Service Card 1 - Chronic Diseases -->
+                    <div class="swiper-slide">
+                        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full" data-aos="fade-up" data-aos-delay="100">
+                            <div class="h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=300&fit=crop" 
+                                     alt="Chronic Disease Treatment" 
+                                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-3">Chronic Diseases</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Effective treatment for diabetes, hypertension, thyroid disorders, arthritis, and other long-term conditions.</p>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Diabetes Management</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Thyroid Disorders</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Arthritis Relief</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Card 2 - Pediatric Care -->
+                    <div class="swiper-slide">
+                        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full" data-aos="fade-up" data-aos-delay="200">
+                            <div class="h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=300&fit=crop" 
+                                     alt="Pediatric Care" 
+                                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-3">Pediatric Care</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Safe and gentle remedies for children's health issues, from recurring infections to behavioral concerns.</p>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Immunity Building</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Growth & Development</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Allergies & Asthma</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Card 3 - Mental Wellness -->
+                    <div class="swiper-slide">
+                        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full" data-aos="fade-up" data-aos-delay="300">
+                            <div class="h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop" 
+                                     alt="Mental Wellness" 
+                                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-3">Mental Wellness</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Holistic approach to anxiety, depression, stress, and other emotional health challenges.</p>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Anxiety & Depression</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Sleep Disorders</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Stress Management</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Service Card 4 - Women's Health -->
+                    <div class="swiper-slide">
+                        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full" data-aos="fade-up" data-aos-delay="400">
+                            <div class="h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=300&fit=crop" 
+                                     alt="Women's Health" 
+                                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-3">Women's Health</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Specialized care for hormonal imbalances, PCOS, menstrual issues, and menopausal symptoms.</p>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>PCOS Treatment</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Menstrual Disorders</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Fertility Support</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Card 5 - Skin Conditions -->
+                    <div class="swiper-slide">
+                        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full" data-aos="fade-up" data-aos-delay="500">
+                            <div class="h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=300&fit=crop" 
+                                     alt="Skin Conditions" 
+                                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-3">Skin Conditions</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Natural treatment for eczema, psoriasis, acne, and other dermatological concerns.</p>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Eczema & Psoriasis</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Acne Treatment</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Hair Fall Solutions</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Card 6 - Respiratory Issues -->
+                    <div class="swiper-slide">
+                        <div class="service-card bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full" data-aos="fade-up" data-aos-delay="600">
+                            <div class="h-48 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" 
+                                     alt="Respiratory Issues" 
+                                     class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-gray-800 mb-3">Respiratory Issues</h3>
+                                <p class="text-gray-600 mb-4 text-sm">Effective remedies for asthma, bronchitis, sinusitis, and recurring respiratory infections.</p>
+                                <ul class="space-y-2 text-sm text-gray-600">
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Asthma Management</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Sinusitis Relief</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-primary-600 mr-2 flex-shrink-0"></i>
+                                        <span>Allergy Treatment</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Services Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Homeopathy Section -->
+    <section id="why-homeopathy" class="py-20 hero-gradient relative overflow-hidden">
+        <div class="absolute inset-0 leaf-pattern opacity-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div data-aos="fade-right">
+                    <p class="text-primary-300 font-medium tracking-wider uppercase mb-4">Why Choose Homeopathy</p>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-2">
+                        The Science of
+                    </h2>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary-300 italic mb-6">
+                        Natural Healing
+                    </h2>
+                    <p class="text-white/80 mb-10 leading-relaxed">
+                        Homeopathy is a 200-year-old system of medicine that treats the whole person, not just the disease. Based on the principle of "like cures like," homeopathic remedies stimulate the body's natural healing abilities.
+                    </p>
+                    
+                    <!-- Benefits List -->
+                    <div class="space-y-6">
+                        <!-- Benefit 1 -->
+                        <div class="flex items-start space-x-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 border border-white/20">
+                                <i data-lucide="shield-check" class="w-5 h-5 text-primary-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Safe & No Side Effects</h4>
+                                <p class="text-white/70 text-sm">Homeopathic medicines are gentle and safe for all ages, from infants to elderly.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Benefit 2 -->
+                        <div class="flex items-start space-x-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 border border-white/20">
+                                <i data-lucide="user-check" class="w-5 h-5 text-primary-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Individualized Treatment</h4>
+                                <p class="text-white/70 text-sm">Each patient receives personalized remedies based on their unique symptoms and constitution.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Benefit 3 -->
+                        <div class="flex items-start space-x-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 border border-white/20">
+                                <i data-lucide="target" class="w-5 h-5 text-primary-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Treats Root Cause</h4>
+                                <p class="text-white/70 text-sm">Unlike conventional medicine, homeopathy addresses the underlying cause, not just symptoms.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Benefit 4 -->
+                        <div class="flex items-start space-x-4" data-aos="fade-up" data-aos-delay="400">
+                            <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0 border border-white/20">
+                                <i data-lucide="indian-rupee" class="w-5 h-5 text-primary-300"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold mb-1">Cost-Effective</h4>
+                                <p class="text-white/70 text-sm">Homeopathic treatments are affordable and provide long-lasting results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Content - Image & Quote -->
+                <div class="relative" data-aos="fade-left">
+                    <div class="relative">
+                        <!-- Main Image -->
+                        <div class="rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=600&h=500&fit=crop" 
+                                 alt="Homeopathic Treatment" 
+                                 class="w-full h-auto object-cover">
+                        </div>
+                        
+                        <!-- Quote Card -->
+                        <div class="absolute -bottom-6 -left-6 lg:left-auto lg:-right-6 bg-white rounded-2xl p-6 shadow-xl max-w-xs" data-aos="fade-up" data-aos-delay="500">
+                            <div class="text-primary-600 mb-3">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                </svg>
+                            </div>
+                            <p class="text-gray-600 italic text-sm mb-4">
+                                "The highest ideal of cure is the rapid, gentle, and permanent restoration of health."
+                            </p>
+                            <div class="border-t border-gray-100 pt-3">
+                                <p class="font-semibold text-gray-800">— Samuel Hahnemann</p>
+                                <p class="text-xs text-gray-500">Founder of Homeopathy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-accent-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <p class="text-primary-600 font-medium tracking-wider uppercase mb-4">Testimonials</p>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-4">
+                    What Our <span class="text-primary-600">Patients Say</span>
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Real stories from real patients who have experienced the healing power of homeopathy.
+                </p>
+            </div>
+            
+            <!-- Testimonials Swiper -->
+            <div class="swiper testimonials-swiper relative">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg h-full" data-aos="fade-up" data-aos-delay="100">
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400">
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic">"After years of struggling with chronic migraines and trying various medications, Dr. Divya's homeopathic treatment has been life-changing. I'm now migraine-free for 8 months!"</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-primary-700 font-semibold">RS</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Rajesh Sharma</p>
+                                    <p class="text-sm text-gray-500">Chronic Migraine Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg h-full" data-aos="fade-up" data-aos-delay="200">
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400">
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic">"My daughter's recurring allergies and skin issues were a constant worry. Dr. Divya's gentle approach worked wonders. She's now healthy and thriving. Highly recommended!"</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-primary-700 font-semibold">PM</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Priya Mehta</p>
+                                    <p class="text-sm text-gray-500">Parent of Pediatric Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg h-full" data-aos="fade-up" data-aos-delay="300">
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400">
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic">"Dealing with PCOS was frustrating until I found Dr. Divya. Her holistic treatment not only regulated my cycles but also helped me lose weight naturally. Forever grateful!"</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-primary-700 font-semibold">AK</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Ananya Kapoor</p>
+                                    <p class="text-sm text-gray-500">PCOS Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg h-full" data-aos="fade-up" data-aos-delay="400">
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400">
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic">"I suffered from severe eczema for years. Multiple dermatologists couldn't help. Dr. Divya's treatment cleared my skin completely in 6 months. No more steroids!"</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-primary-700 font-semibold">VG</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Vikram Gupta</p>
+                                    <p class="text-sm text-gray-500">Skin Condition Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 5 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg h-full" data-aos="fade-up" data-aos-delay="500">
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400">
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic">"My son had frequent respiratory infections and was on antibiotics constantly. Since consulting Dr. Divya, his immunity has improved tremendously. No antibiotics in over a year!"</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-primary-700 font-semibold">SD</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Sneha Desai</p>
+                                    <p class="text-sm text-gray-500">Parent of 7-year-old</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial 6 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-2xl p-8 shadow-lg h-full" data-aos="fade-up" data-aos-delay="600">
+                            <div class="flex items-center mb-4">
+                                <div class="flex text-yellow-400">
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-6 italic">"Living with arthritis pain was unbearable. Dr. Divya's gentle remedies have given me my mobility back. I can now walk without pain and have stopped most painkillers."</p>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                                    <span class="text-primary-700 font-semibold">MN</span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800">Madhav Nair</p>
+                                    <p class="text-sm text-gray-500">Arthritis Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Navigation Arrows -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div data-aos="fade-right">
+                    <p class="text-primary-600 font-medium tracking-wider uppercase mb-4">Get In Touch</p>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-gray-800 mb-6">
+                        Book Your <span class="text-primary-600">Consultation</span>
+                    </h2>
+                    <p class="text-gray-600 mb-8">
+                        Take the first step towards natural healing. Fill out the form below and we'll get back to you within 24 hours.
+                    </p>
+                    
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" placeholder="+91 XXXXX XXXXX" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" placeholder="your@email.com" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Health Concern</label>
+                            <select class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none bg-white">
+                                <option value="">Select your primary concern</option>
+                                <option value="chronic">Chronic Disease</option>
+                                <option value="skin">Skin & Hair Issues</option>
+                                <option value="mental">Mental Wellness</option>
+                                <option value="pediatric">Pediatric Care</option>
+                                <option value="women">Women's Health</option>
+                                <option value="respiratory">Respiratory & Allergies</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" placeholder="Briefly describe your health concerns..." class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all outline-none resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary-700 text-white py-4 rounded-xl font-medium hover:bg-primary-800 transition-all shadow-lg hover:shadow-xl flex items-center justify-center space-x-2">
+                            <span>Request Appointment</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info & Map -->
+                <div data-aos="fade-left">
+                    <div class="bg-primary-700 rounded-3xl p-8 text-white mb-8">
+                        <h3 class="text-xl font-semibold mb-6">Clinic Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium mb-1">Bhardwaj Homoeopathy Clinic</p>
+                                    <p class="text-white/80">Flat -4489, Pocket 5 and 6<br>Sector B, Vasant Kunj<br>New Delhi, Delhi 110070</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium mb-1">Phone</p>
+                                    <p class="text-white/80">+91 98717 88411</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium mb-1">Clinic Hours</p>
+                                    <p class="text-white/80">Mon - Sat: 10:00 AM - 7:00 PM<br>Sunday: By Appointment Only</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Map -->
+                    <div class="rounded-3xl overflow-hidden shadow-lg h-64">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.7835714067166!2d77.20905!3d28.5575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce26f903969d7%3A0x8bf5f9df3f9f9b5!2sGreen%20Park%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1703500000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            class="grayscale hover:grayscale-0 transition-all duration-500">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <a href="#home" class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center">
+                            <i data-lucide="leaf" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="text-xl font-serif font-semibold">Dr. Divya Bhardwaj</span>
+                    </a>
+                    <p class="text-gray-400 mb-6">Providing holistic homeopathic care for over 8 years at Bhardwaj Homoeopathy Clinic. Your journey to natural wellness starts here.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-600 transition-colors">
+                            <i data-lucide="youtube" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Dr. Divya</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#why-homeopathy" class="text-gray-400 hover:text-white transition-colors">Why Homeopathy</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition-colors">Testimonials</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Chronic Disease</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Skin & Hair Care</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Mental Wellness</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Pediatric Care</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Women's Health</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Respiratory Issues</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary-500 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-400">Flat -4489, Pocket 5 and 6, Sector B, Vasant Kunj, New Delhi, Delhi 110070</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-primary-500 flex-shrink-0"></i>
+                            <span class="text-gray-400">+91 98717 88411</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 Bhardwaj Homoeopathy Clinic. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary-700 z-50">
+        <i data-lucide="chevron-up" class="w-6 h-6"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50
+        });
+        
+        // Initialize Hero Swiper Carousel
+        const heroSwiper = new Swiper('.hero-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            speed: 1200,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+        
+        // Initialize Services Swiper - Grid on desktop, carousel on mobile
+        const servicesSwiper = new Swiper('.services-swiper', {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+            speed: 400,
+            grabCursor: true,
+            watchSlidesProgress: true,
+            observer: true,
+            observeParents: true,
+            pagination: {
+                el: '.services-swiper .swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 24,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    spaceBetween: 32,
+                },
+            },
+        });
+        
+        // Initialize Testimonials Swiper - 3 on desktop, 1 on mobile
+        const testimonialsSwiper = new Swiper('.testimonials-swiper', {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+            speed: 400,
+            grabCursor: true,
+            watchSlidesProgress: true,
+            observer: true,
+            observeParents: true,
+            navigation: {
+                nextEl: '.testimonials-swiper .swiper-button-next',
+                prevEl: '.testimonials-swiper .swiper-button-prev',
+            },
+            pagination: {
+                el: '.testimonials-swiper .swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 24,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    spaceBetween: 32,
+                },
+            },
+        });
+        
+        // Initialize Mobile Gallery Swiper
+        const mobileGallerySwiper = new Swiper('.mobile-gallery-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            speed: 400,
+            grabCursor: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.mobile-gallery-swiper .swiper-pagination',
+                clickable: true,
+            },
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-primary-900/95', 'backdrop-blur-lg', 'shadow-lg');
+            } else {
+                navbar.classList.remove('bg-primary-900/95', 'backdrop-blur-lg', 'shadow-lg');
+            }
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Back to top button
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Form submission (placeholder)
+        const contactForm = document.querySelector('form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will contact you within 24 hours to confirm your appointment.');
+            contactForm.reset();
+        });
+    </script>
+</body>
+</html>
